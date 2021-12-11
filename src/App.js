@@ -1,4 +1,5 @@
 import "./App.css";
+import LinksComponent from "./components/LinksComponent";
 import LogoComponent from "./components/LogoComponent";
 import MessageForm from "./components/MessageForm";
 
@@ -10,11 +11,7 @@ function App() {
       </div>
       <MessageForm />
       <div className="footer">
-        <div className="links">
-          <LogoComponent />
-          Design amazing digital experiences that create more happy in the
-          world.
-        </div>
+        <LinksComponent />
         <div className="socialIcons">Github</div>
       </div>
     </>

@@ -1,0 +1,14 @@
+.heading {
+  font-size: 0.75em;
+  color: #818589;
+  margin-bottom: 0.7em;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  color: #36454f;
+}
+.items > span {
+  font-size: 0.8em;
+  margin-bottom: 0.7em;
+}

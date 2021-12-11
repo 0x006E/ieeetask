@@ -1,0 +1,19 @@
+.description {
+  font-weight: 400;
+  color: #818589;
+  font-size: 0.9em;
+}
+.links {
+  padding: 10px;
+}
+.logo-header {
+  margin: 20px 0px 30px 0px;
+}
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+}
+.categories > * {
+  flex: 50%;
+  margin-bottom: 10px;
+}

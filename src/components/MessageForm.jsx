@@ -82,7 +82,7 @@ const MessageForm = () => {
               </label>
             </div>
             <button type="submit">Send message</button>
-            <label className="toc">
+            <label id="toc">
               <Field type="checkbox" name="toc" />
               You agree to our friendly <u>privacy policy</u>
             </label>

@@ -2,7 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Josefin Sans", Arial, sans-serif;
+  font-family: "Outfit", Arial, sans-serif;
   font-kerning: 1%;
 }
 * {
@@ -13,9 +13,13 @@ body {
   height: 60px;
   display: flex;
   align-items: center;
-  font-family: "Roboto";
+  font-family: "Lato";
   font-size: 18px;
   font-weight: 500;
+  top: 0;
+  position: sticky;
+  background: #fff;
+  padding: 0 20px;
 }
 .links {
   background: #f4f7fc;

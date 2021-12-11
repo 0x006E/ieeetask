@@ -7,7 +7,7 @@
   padding: 0.75em;
 }
 .form {
-  padding: 2em 0;
+  padding: 1.5em 0;
 }
 h1,
 h2,
@@ -15,7 +15,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-weight: 300;
 }
 h1 {
@@ -40,7 +40,7 @@ textarea {
   border-radius: 5px;
   padding: 1em;
   margin-bottom: 1.3em;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: 13px;
 }
 .form > form > button[type="submit"] {
@@ -62,7 +62,7 @@ textarea {
 .form > form > input::placeholder,
 textarea::placeholder {
   color: #171e2e;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 .form > form > textarea {
@@ -70,9 +70,9 @@ textarea::placeholder {
   height: 100px;
 }
 .services > label {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: 12px;
-  color: #171e2e;
+  color: #818589;
   padding-right: 0.25em;
   margin-right: 1em;
   width: 45%;
@@ -86,6 +86,7 @@ textarea::placeholder {
   flex-wrap: wrap;
   margin: 5px 0;
 }
-.toc {
+#toc {
   margin-top: 1em;
+  color: #818589;
 }
