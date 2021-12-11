@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/ieeetask/static/css/main.2171a6ad.chunk.css",
-    "main.js": "/ieeetask/static/js/main.125b71bd.chunk.js",
-    "main.js.map": "/ieeetask/static/js/main.125b71bd.chunk.js.map",
+    "main.css": "/ieeetask/static/css/main.1979b06d.chunk.css",
+    "main.js": "/ieeetask/static/js/main.d34b80a6.chunk.js",
+    "main.js.map": "/ieeetask/static/js/main.d34b80a6.chunk.js.map",
     "runtime-main.js": "/ieeetask/static/js/runtime-main.faa2d520.js",
     "runtime-main.js.map": "/ieeetask/static/js/runtime-main.faa2d520.js.map",
     "static/js/2.ee248058.chunk.js": "/ieeetask/static/js/2.ee248058.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.f62ef604.chunk.js": "/ieeetask/static/js/3.f62ef604.chunk.js",
     "static/js/3.f62ef604.chunk.js.map": "/ieeetask/static/js/3.f62ef604.chunk.js.map",
     "index.html": "/ieeetask/index.html",
-    "static/css/main.2171a6ad.chunk.css.map": "/ieeetask/static/css/main.2171a6ad.chunk.css.map",
+    "static/css/main.1979b06d.chunk.css.map": "/ieeetask/static/css/main.1979b06d.chunk.css.map",
     "static/js/2.ee248058.chunk.js.LICENSE.txt": "/ieeetask/static/js/2.ee248058.chunk.js.LICENSE.txt",
     "static/media/facebook.b343f6c1.svg": "/ieeetask/static/media/facebook.b343f6c1.svg",
     "static/media/github.3b21c250.svg": "/ieeetask/static/media/github.3b21c250.svg",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.faa2d520.js",
     "static/js/2.ee248058.chunk.js",
-    "static/css/main.2171a6ad.chunk.css",
-    "static/js/main.125b71bd.chunk.js"
+    "static/css/main.1979b06d.chunk.css",
+    "static/js/main.d34b80a6.chunk.js"
   ]
 }
