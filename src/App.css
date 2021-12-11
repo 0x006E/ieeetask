@@ -9,19 +9,7 @@ body {
   box-sizing: border-box;
   transition: all 0.1s ease-in-out;
 }
-.nav {
-  border-bottom: 1px solid #f0f0f0;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  font-family: "Lato";
-  font-size: 18px;
-  font-weight: 500;
-  top: 0;
-  position: sticky;
-  background: #fff;
-  padding: 0 20px;
-}
+
 .links {
   background: #f4f7fc;
 }

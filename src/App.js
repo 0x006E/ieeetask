@@ -1,15 +1,13 @@
 import "./App.css";
 import FooterBottom from "./components/FooterBottom";
 import LinksComponent from "./components/LinksComponent";
-import LogoComponent from "./components/LogoComponent";
 import MessageForm from "./components/MessageForm";
+import NavbarComponent from "./components/NavbarComponent";
 
 function App() {
   return (
     <>
-      <div className="nav">
-        <LogoComponent />
-      </div>
+      <NavbarComponent />
       <div className="middle">
         <div className="sideimg">&nbsp;</div>
         <MessageForm />
