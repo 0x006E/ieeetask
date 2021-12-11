@@ -1,7 +1,7 @@
 import "./App.css";
-import FooterBottom from "./components/FooterBottom";
+import FooterBottomComponent from "./components/FooterBottomComponent";
 import LinksComponent from "./components/LinksComponent";
-import MessageForm from "./components/MessageForm";
+import MessageFormComponent from "./components/MessageFormComponent";
 import NavbarComponent from "./components/NavbarComponent";
 
 function App() {
@@ -10,11 +10,11 @@ function App() {
       <NavbarComponent />
       <div className="middle">
         <div className="sideimg">&nbsp;</div>
-        <MessageForm />
+        <MessageFormComponent />
       </div>
       <div className="footer">
         <LinksComponent />
-        <FooterBottom />
+        <FooterBottomComponent />
       </div>
     </>
   );

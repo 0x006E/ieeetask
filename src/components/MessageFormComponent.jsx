@@ -1,8 +1,11 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
+import { useState } from "react";
 import * as Yup from "yup";
-import "./css/MessageForm.css";
+import "./css/MessageFormComponent.css";
 
-const MessageForm = () => {
+const MessageFormComponent = () => {
+  const [error, setError] = useState(null);
+  const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
   const API_URL = "https://iksinterns.herokuapp.com/api/";
   const phoneRegExp =
     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
@@ -35,17 +38,27 @@ const MessageForm = () => {
             .max(10, "This does not look like a phone number"),
           description: Yup.string().required("Field required"),
         })}
-        onSubmit={async (values, { setSubmitting }) => {
-          await fetch(`${API_URL}post`, {
-            method: "POST",
-            body: new URLSearchParams({
-              name: values.name,
-              email: values.email,
-              phone: values.phone,
-              description: values.description,
-              services: JSON.stringify(values.services),
-            }),
-          });
+        onSubmit={async (values, { setSubmitting, resetForm }) => {
+          try {
+            let response = await fetch(`${API_URL}post`, {
+              method: "POST",
+              body: new URLSearchParams({
+                name: values.name,
+                email: values.email,
+                phone: values.phone,
+                description: values.description,
+                services: JSON.stringify(values.services),
+              }),
+            });
+            let error = response.status === 201 ? false : true;
+            setError(error);
+            await sleep(5000);
+            if (!error) resetForm();
+          } catch (e) {
+            setError(true);
+          }
+          await sleep(5000);
+          setError(null);
           setSubmitting(false);
         }}
       >
@@ -106,8 +119,17 @@ const MessageForm = () => {
               disabled={
                 !props.values.toc || props.isSubmitting || !props.isValid
               }
+              className={`${
+                error === true ? "red-error" : error === false ? "success" : ""
+              }`}
             >
-              Send message
+              {`${
+                error === true
+                  ? "Something went wrong!"
+                  : error === false
+                  ? "Message sent"
+                  : "Send message"
+              }`}
             </button>
             <label id="toc">
               <Field type="checkbox" name="toc" />
@@ -120,4 +142,4 @@ const MessageForm = () => {
   );
 };
 
-export default MessageForm;
+export default MessageFormComponent;

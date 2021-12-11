@@ -2,7 +2,7 @@ import { ReactComponent as FacebookLogo } from "../images/facebook.svg";
 import { ReactComponent as GithubLogo } from "../images/github.svg";
 import { ReactComponent as LinkedinLogo } from "../images/linkedin.svg";
 import { ReactComponent as TwitterLogo } from "../images/twitter.svg";
-import "./css/FooterBottom.css";
+import "./css/FooterBottomComponent.css";
 
 const FooterBottom = () => {
   return (
