@@ -1,23 +1,27 @@
 {
   "files": {
-    "main.css": "/ieeetask/static/css/main.707d4dfd.chunk.css",
-    "main.js": "/ieeetask/static/js/main.f4a6a80f.chunk.js",
-    "main.js.map": "/ieeetask/static/js/main.f4a6a80f.chunk.js.map",
-    "runtime-main.js": "/ieeetask/static/js/runtime-main.e80c48ac.js",
-    "runtime-main.js.map": "/ieeetask/static/js/runtime-main.e80c48ac.js.map",
-    "static/js/2.5a592875.chunk.js": "/ieeetask/static/js/2.5a592875.chunk.js",
-    "static/js/2.5a592875.chunk.js.map": "/ieeetask/static/js/2.5a592875.chunk.js.map",
-    "static/js/3.ac34b6b3.chunk.js": "/ieeetask/static/js/3.ac34b6b3.chunk.js",
-    "static/js/3.ac34b6b3.chunk.js.map": "/ieeetask/static/js/3.ac34b6b3.chunk.js.map",
+    "main.css": "/ieeetask/static/css/main.3042aded.chunk.css",
+    "main.js": "/ieeetask/static/js/main.bb15935f.chunk.js",
+    "main.js.map": "/ieeetask/static/js/main.bb15935f.chunk.js.map",
+    "runtime-main.js": "/ieeetask/static/js/runtime-main.b516a280.js",
+    "runtime-main.js.map": "/ieeetask/static/js/runtime-main.b516a280.js.map",
+    "static/js/2.c6d6d163.chunk.js": "/ieeetask/static/js/2.c6d6d163.chunk.js",
+    "static/js/2.c6d6d163.chunk.js.map": "/ieeetask/static/js/2.c6d6d163.chunk.js.map",
+    "static/js/3.d6afea60.chunk.js": "/ieeetask/static/js/3.d6afea60.chunk.js",
+    "static/js/3.d6afea60.chunk.js.map": "/ieeetask/static/js/3.d6afea60.chunk.js.map",
     "index.html": "/ieeetask/index.html",
-    "static/css/main.707d4dfd.chunk.css.map": "/ieeetask/static/css/main.707d4dfd.chunk.css.map",
-    "static/js/2.5a592875.chunk.js.LICENSE.txt": "/ieeetask/static/js/2.5a592875.chunk.js.LICENSE.txt",
-    "static/media/logo.232c30e5.svg": "/ieeetask/static/media/logo.232c30e5.svg"
+    "static/css/main.3042aded.chunk.css.map": "/ieeetask/static/css/main.3042aded.chunk.css.map",
+    "static/js/2.c6d6d163.chunk.js.LICENSE.txt": "/ieeetask/static/js/2.c6d6d163.chunk.js.LICENSE.txt",
+    "static/media/facebook.b343f6c1.svg": "/ieeetask/static/media/facebook.b343f6c1.svg",
+    "static/media/github.3b21c250.svg": "/ieeetask/static/media/github.3b21c250.svg",
+    "static/media/linkedin.98956d29.svg": "/ieeetask/static/media/linkedin.98956d29.svg",
+    "static/media/logo.232c30e5.svg": "/ieeetask/static/media/logo.232c30e5.svg",
+    "static/media/twitter.af8d0c30.svg": "/ieeetask/static/media/twitter.af8d0c30.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.e80c48ac.js",
-    "static/js/2.5a592875.chunk.js",
-    "static/css/main.707d4dfd.chunk.css",
-    "static/js/main.f4a6a80f.chunk.js"
+    "static/js/runtime-main.b516a280.js",
+    "static/js/2.c6d6d163.chunk.js",
+    "static/css/main.3042aded.chunk.css",
+    "static/js/main.bb15935f.chunk.js"
   ]
 }
