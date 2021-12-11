@@ -5,9 +5,14 @@
   display: flex;
   flex-direction: column;
   padding: 0.75em;
+  max-width: 400px;
 }
 .form {
   padding: 1.5em 0;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 h1,
 h2,
@@ -27,21 +32,24 @@ h3 {
 }
 .title {
   padding: 0.75em;
+  max-width: 400px;
 }
 .title > h3 {
   font-weight: 400;
   color: gray;
   font-size: 1em;
 }
-.form > form > input,
+.form > form > .input > input,
 textarea {
   border: 2px solid #f0f0f0;
   outline: none;
   border-radius: 5px;
   padding: 1em;
-  margin-bottom: 1.3em;
   font-family: "Outfit", sans-serif;
   font-size: 13px;
+}
+.form > form > .input {
+  margin-bottom: 1.3em;
 }
 .form > form > button[type="submit"] {
   background: #475467;
@@ -54,20 +62,29 @@ textarea {
   font-kerning: 1%;
   cursor: pointer;
 }
-.form > form > label {
+.form > form > button[type="submit"]:disabled {
+  background: #f0f0f0;
+  color: #475467;
+  cursor: not-allowed;
+}
+.form > form > .input > label {
   font-size: 13px;
   color: #171e2e;
   margin-bottom: 5px;
 }
-.form > form > input::placeholder,
+.form > form > .input > input::placeholder,
 textarea::placeholder {
   color: #171e2e;
   font-family: "Outfit", sans-serif;
 }
 
-.form > form > textarea {
+.form > form > .input > textarea {
   resize: none;
   height: 100px;
+}
+.input {
+  display: flex;
+  flex-direction: column;
 }
 .services > label {
   font-family: "Outfit", sans-serif;
@@ -75,7 +92,7 @@ textarea::placeholder {
   color: #818589;
   padding-right: 0.25em;
   margin-right: 1em;
-  width: 45%;
+  min-width: 130px;
   margin-bottom: 1em;
 }
 .services > input[type="checkbox"] {
@@ -87,6 +104,25 @@ textarea::placeholder {
   margin: 5px 0;
 }
 #toc {
+  font-size: 13px;
+  color: #171e2e;
+  margin-bottom: 5px;
   margin-top: 1em;
   color: #818589;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 0.5em;
+}
+/* Responsive */
+
+@media only screen and (min-width: 640px) {
+  .form {
+    padding: 2em 2em;
+  }
+  h1 {
+    font-size: 2.5em;
+  }
 }

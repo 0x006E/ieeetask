@@ -1,8 +1,11 @@
-import { Field, Form, Formik } from "formik";
+import { ErrorMessage, Field, Form, Formik } from "formik";
+import * as Yup from "yup";
 import "./css/MessageForm.css";
 
 const MessageForm = () => {
-  const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
+  const API_URL = "https://iksinterns.herokuapp.com/api/";
+  const phoneRegExp =
+    /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
   return (
     <div className="form">
       <div className="title">
@@ -13,75 +16,99 @@ const MessageForm = () => {
       </div>
       <Formik
         initialValues={{
-          firstName: "",
-          lastName: "",
+          name: "",
           email: "",
           phone: "",
           description: "",
           services: [],
           toc: false,
         }}
-        onSubmit={async (values) => {
-          await sleep(500);
-          alert(JSON.stringify(values, null, 2));
+        validationSchema={Yup.object({
+          name: Yup.string().required("Field required"),
+          email: Yup.string()
+            .email("Invalid email address")
+            .required("Field required"),
+          phone: Yup.string()
+            .required("Field required")
+            .matches(phoneRegExp, "Phone number is not valid")
+            .min(10, "This does not look like a phone number")
+            .max(10, "This does not look like a phone number"),
+          description: Yup.string().required("Field required"),
+        })}
+        onSubmit={async (values, { setSubmitting }) => {
+          await fetch(`${API_URL}post`, {
+            method: "POST",
+            body: new URLSearchParams({
+              name: values.name,
+              email: values.email,
+              phone: values.phone,
+              description: values.description,
+              services: JSON.stringify(values.services),
+            }),
+          });
+          setSubmitting(false);
         }}
       >
-        {({ isSubmitting }) => (
+        {(props) => (
           <Form>
-            <label htmlFor="firstName">First name</label>
-            <Field name="firstName" placeholder="First name" />
-
-            <label htmlFor="lastName">Last name</label>
-            <Field name="lastName" placeholder="Last name" />
-
-            <label htmlFor="email">Email</label>
-            <Field name="email" placeholder="you@company.com" />
-
-            <label htmlFor="phone">Phone number</label>
-            <Field name="phone" placeholder="+1 (555) 000-0000" />
-
-            <label htmlFor="description">How can we help?</label>
-            <Field
-              as="textarea"
-              name="description"
-              placeholder="Tell us a little about the project...."
-            />
-            <label htmlFor="services">Services</label>
-            <div role="group" className="services">
-              <label>
-                <Field type="checkbox" name="checked" value="Website design" />
-                Website design
-              </label>
-              <label>
-                <Field
-                  type="checkbox"
-                  name="checked"
-                  value="Content Creation"
-                />
-                Content Creation
-              </label>
-              <label>
-                <Field type="checkbox" name="checked" value="UX Design" />
-                UX Design
-              </label>
-              <label>
-                <Field
-                  type="checkbox"
-                  name="checked"
-                  value="Strategy & consulting"
-                />
-                Strategy & consulting
-              </label>
-              <label>
-                <Field type="checkbox" name="checked" value="User research" />
-                User research
-              </label>
-              <label>
-                <Field type="checkbox" name="checked" value="other" />
-                Other
-              </label>
+            <div className="input">
+              <label htmlFor="name">Name</label>
+              <Field name="name" placeholder="Name" />
+              <div className="error">
+                <ErrorMessage name="name" />
+              </div>
             </div>
-            <button type="submit">Send message</button>
+            <div className="input">
+              <label htmlFor="email">Email</label>
+              <Field name="email" placeholder="you@company.com" />
+              <div className="error">
+                <ErrorMessage name="email" />
+              </div>
+            </div>
+            <div className="input">
+              <label htmlFor="phone">Phone number</label>
+              <Field name="phone" placeholder="+1 (555) 000-0000" />
+              <div className="error">
+                <ErrorMessage name="phone" />
+              </div>
+            </div>
+            <div className="input">
+              <label htmlFor="description">How can we help?</label>
+              <Field
+                as="textarea"
+                name="description"
+                placeholder="Tell us a little about the project...."
+              />
+              <div className="error">
+                <ErrorMessage name="description" />
+              </div>
+            </div>
+            <div className="input">
+              <label htmlFor="services">Services</label>
+              <div role="group" className="services">
+                {[
+                  "Website design",
+                  "Content Creation",
+                  "UX Design",
+                  "Strategy & consulting",
+                  "User research",
+                  "Other",
+                ].map((service) => (
+                  <label key={service}>
+                    <Field type="checkbox" name="services" value={service} />
+                    {service}
+                  </label>
+                ))}
+              </div>
+            </div>
+            <button
+              type="submit"
+              disabled={
+                !props.values.toc || props.isSubmitting || !props.isValid
+              }
+            >
+              Send message
+            </button>
             <label id="toc">
               <Field type="checkbox" name="toc" />
               You agree to our friendly <u>privacy policy</u>
