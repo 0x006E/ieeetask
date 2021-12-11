@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ieeetask/static/css/main.707d4dfd.chunk.css",
-    "main.js": "/ieeetask/static/js/main.b5943e62.chunk.js",
-    "main.js.map": "/ieeetask/static/js/main.b5943e62.chunk.js.map",
+    "main.js": "/ieeetask/static/js/main.f4a6a80f.chunk.js",
+    "main.js.map": "/ieeetask/static/js/main.f4a6a80f.chunk.js.map",
     "runtime-main.js": "/ieeetask/static/js/runtime-main.e80c48ac.js",
     "runtime-main.js.map": "/ieeetask/static/js/runtime-main.e80c48ac.js.map",
     "static/js/2.5a592875.chunk.js": "/ieeetask/static/js/2.5a592875.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.e80c48ac.js",
     "static/js/2.5a592875.chunk.js",
     "static/css/main.707d4dfd.chunk.css",
-    "static/js/main.b5943e62.chunk.js"
+    "static/js/main.f4a6a80f.chunk.js"
   ]
 }
